@@ -1,0 +1,22 @@
+{
+  "name": "ssh-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ssh.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "ramda": "^0.26.1",
+    "ssh2": "^0.8.2",
+    "strip-ansi": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  }
+}
