@@ -14,7 +14,6 @@ const {
   head,
   when,
   prop,
-  zipObj,
   trim,
   replace,
   test,
@@ -76,6 +75,7 @@ const getConfig = () => {
 
 const parsePath = pipe(
   nth(2),
+  trim,
   split(' '),
   applySpec({
     from: nth(0),
