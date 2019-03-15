@@ -88,8 +88,13 @@ const parseCommand = when(
   test(/(get|put)(.*)/i),
   pipe(
     match(/(get|put)(.*)/i),
-    map(pipe(trim, replace(/\s+/g, ' '), stripAnsi)),
-    map(replace(/\\u.+/g, '')),
+    map(pipe(
+      trim,
+      replace(/\s+/g, ' '),
+      stripAnsi,
+      replace(/[\b]/g, ''),
+      replace(/\s+/g, ' '),
+    )),
     applySpec({
       command: nth(1),
       filePath: parsePath,
